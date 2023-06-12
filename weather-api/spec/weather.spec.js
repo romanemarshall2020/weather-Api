@@ -1,14 +1,13 @@
-import Weather from '../js/weather.js';
+const Weather = require('../js/weather.js');
 
 describe("weather", () => {
-    let weather = new Weather()
     it("Receives a valid response when calling location API", async () => {
         //test that when you call getLatAndLong with valid input that it returns a response that is not empty
          
         
-       
+        let weatherArr = await Weather.getLatAndLong('atlanta', 'georgia');
          //expect t to not be empty or have text etc
-            expect( weather.getLatAndLong('atlanta', 'georgia')).toEqual(["33.7489924", "-84.3902644"])
+            expect(weatherArr).toEqual(["33.7489924", "-84.3902644"])
          //expect t['lat'] to be a number or something
          
        });

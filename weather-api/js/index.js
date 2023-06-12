@@ -1,1 +1,1 @@
-import Weather from "../js/weather"
+// import Weather from "../js/weather"
