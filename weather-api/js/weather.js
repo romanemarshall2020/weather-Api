@@ -1,4 +1,4 @@
-
+const fetch = require("node-fetch")
 // function used to consume API
 async function getLatAndLong(city, state) {
 //how to make an API call to get lattitude and longitude:

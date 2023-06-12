@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/node": "^18.0.6",
     "jasmine": "^5.0.1",
-    "node-fetch": "^3.2.6",
+    "node-fetch": "^2.6.11",
     "readline-sync": "^1.4.10"
   }
 }
