@@ -50,10 +50,10 @@ let url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +"&longitude=
  
  
   const jsonData = await res.json();
-  console.log(jsonData)
+  // console.log(jsonData)
  if( jsonData["error"] !== true ){
-  // let tempMax = jsonData["daily"]["temperature_2m_max"]
-  // let tempMin = jsonData["daily"]["temperature_2m_min"]
+  let tempMax = jsonData["daily"]["temperature_2m_max"]
+  let tempMin = jsonData["daily"]["temperature_2m_min"]
   let units = jsonData["daily_units"]["temperature_2m_min"]
   let time = jsonData["daily"]["time"]
   let maxTemp = jsonData["daily"]["temperature_2m_max"]
@@ -66,25 +66,25 @@ let url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +"&longitude=
   let day6 = time[5].substr(5, 7)
   let day7 = time[6].substr(5, 7)
 
-  console.log("Max Temperature for the next 7 days : " )
-  console.log(day1 + " : " + maxTemp[0] + units)
-  console.log(day2 + " : " + maxTemp[1] + units)
-  console.log(day3 + " : " + maxTemp[2] + units)
-  console.log(day4 + " : " + maxTemp[3] + units)
-  console.log(day5 + " : " + maxTemp[4] + units)
-  console.log(day6 + " : " + maxTemp[5] + units)
-  console.log(day7 + " : " + maxTemp[6] + units)
+  console.log("Max temperature for the next 7 days : " )
+  console.log(day1 + ": " + maxTemp[0] + units)
+  console.log(day2 + ": " + maxTemp[1] + units)
+  console.log(day3 + ": " + maxTemp[2] + units)
+  console.log(day4 + ": " + maxTemp[3] + units)
+  console.log(day5 + ": " + maxTemp[4] + units)
+  console.log(day6 + ": " + maxTemp[5] + units)
+  console.log(day7 + ": " + maxTemp[6] + units)
   
   console.log("\n")
 
-  console.log("Min. Temperature for the next 7 days : " )
-  console.log(day1 + " : " + minTemp[0] + units)
-  console.log(day2 + " : " + minTemp[1] + units)
-  console.log(day3 + " : " + minTemp[2] + units)
-  console.log(day4 + " : " + minTemp[3] + units)
-  console.log(day5 + " : " + minTemp[4] + units)
-  console.log(day6 + " : " + minTemp[5] + units)
-  console.log(day7 + " : " + minTemp[6] + units)
+  console.log("Min. temperature for the next 7 days : " )
+  console.log(day1 + ": " + minTemp[0] + units)
+  console.log(day2 + ": " + minTemp[1] + units)
+  console.log(day3 + ": " + minTemp[2] + units)
+  console.log(day4 + ": " + minTemp[3] + units)
+  console.log(day5 + ": " + minTemp[4] + units)
+  console.log(day6 + ": " + minTemp[5] + units)
+  console.log(day7 + ": " + minTemp[6] + units)
   let tempArray = [tempMax, tempMin]
  
  return tempArray
