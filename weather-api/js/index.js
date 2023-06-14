@@ -1,1 +1,2 @@
-// import Weather from "../js/weather"
+const Weather = require("../js/weather")
+Weather.main()
